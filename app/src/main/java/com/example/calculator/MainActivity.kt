@@ -51,6 +51,7 @@ class MainActivity : AppCompatActivity() {
                         '/' -> value /= text.toDouble()
                     }
 
+                    //test
 
 
                     text = when(value % 1 != 0.0)
