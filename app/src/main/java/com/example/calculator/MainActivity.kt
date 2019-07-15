@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
 
         var value = 0.0
         var text = "0"
+        val equation = mutableListOf<String>()
 
         fun update(entered : Char)
         {
@@ -26,7 +27,7 @@ class MainActivity : AppCompatActivity() {
                     if(text == "0")
                     {
                         if (entered != '0')
-                            text += entered.toString()
+                            text = entered.toString()
                     }
                     else
                         text += entered
@@ -40,25 +41,9 @@ class MainActivity : AppCompatActivity() {
                 }
                 else ->
                 {
-                    when(entered)
-                    {
-                        '+' -> value += text.toDouble()
-
-                        '-' -> value -= text.toDouble()
-
-                        'x' -> value *= text.toDouble()
-
-                        '/' -> value /= text.toDouble()
-                    }
-
-                    //test
-
-
-                    text = when(value % 1 != 0.0)
-                    {
-                        true -> value.toString()
-                        false -> value.toInt().toString()
-                    }
+                    equation.add(text)
+                    equation.add(entered.toString())
+                    text = ""
                 }
             }
 
@@ -90,5 +75,6 @@ class MainActivity : AppCompatActivity() {
         minus.setOnClickListener { update('-') }
         multiply.setOnClickListener { update('x') }
         divide.setOnClickListener { update('/') }
+        //equals.setOnClickListener{ update('=') }
     }
 }

@@ -17,4 +17,5 @@
     <string name="decimalPoint">.</string>
     <string name="clear">C</string>
     <string name="sampleText">SAMPLESAMPLE</string>
+    <string name="equals">=</string>
 </resources>
