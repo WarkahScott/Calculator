@@ -67,6 +67,8 @@ class MainActivity : AppCompatActivity()
 				'.'         ->
 				{
 					if (text.contains('.'))
+					else if (text == "")
+						text += "0."
 					else
 						text += entered
 				}
