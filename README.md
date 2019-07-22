@@ -30,7 +30,6 @@ Current features:
 * Calculates input left-to-right
 
 To-do list:
-* Fix decimal point bug
 * Implement a negative button
 * Fix previous equation formatting
 
